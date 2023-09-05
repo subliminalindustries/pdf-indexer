@@ -24,3 +24,5 @@ The output contains two dictionaries: `keys` and `keywords`. `keys` contains map
 ```
 { "keys": { "/path/to/fileA.pdf": 0, ..., "/path/to/fileZ.pdf": 25 }, "keywords": { "bob": [ 0, 5 ], "is": [ 0, ..., 25 ], "your": [ 0, ..., 25 ], "uncle": [ 0, 5 ] }}
 ```
+
+Punctiation, unicode and whitespace characters are removed from keywords, and keywords are converted to lowercase.
