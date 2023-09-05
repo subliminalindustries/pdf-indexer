@@ -1,6 +1,9 @@
 # pdf-indexer
 Index pdf file paths according to text words
 
+
+## Usage
+
 ```
 usage: indexer.py [-h] [--src-dir SRC_DIR] [--output-file OUTPUT_FILE]
 
@@ -12,4 +15,12 @@ options:
                         Source directory
   --output-file OUTPUT_FILE, -o OUTPUT_FILE
                         Output file (JSON)
+```
+
+## Output
+
+The output contains two dictionaries: `keys` and `keywords`. `keys` contains mappings of file paths to integers, while `keywords` contains mappings of keywords to integers representing file paths as defined in `keys`:
+
+```
+{ "keys": { "/path/to/fileA.pdf": 0, ..., "/path/to/fileZ.pdf": 25 }, "keywords": { "bob": [ 0, 5 ], "is": [ 0, ..., 25 ], "your": [ 0, ..., 25 ], "uncle": [ 0, 5 ] }}
 ```
