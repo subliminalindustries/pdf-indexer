@@ -92,8 +92,8 @@ if __name__ == '__main__':
 
             mapping['keywords'][tw].append(key)
 
-    mapping['keys'] = collections.OrderedDict(natsorted(mapping['keywords'].items()))
-    mapping['keywords'] = collections.OrderedDict(natsorted(mapping['keys'].items()))
+    mapping['keys'] = collections.OrderedDict(natsorted(mapping['keys'].items()))
+    mapping['keywords'] = collections.OrderedDict(natsorted(mapping['keywords'].items()))
 
     with open(output_filename, 'w') as fp:
         json.dump(mapping, fp)
